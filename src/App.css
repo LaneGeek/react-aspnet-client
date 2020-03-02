@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  background-color: antiquewhite;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -38,6 +39,7 @@
 }
 
 .Survey{
-  border: solid red 1px;
+  border: solid red 5px;
   margin: 50px;
+  padding: 50px;
 }

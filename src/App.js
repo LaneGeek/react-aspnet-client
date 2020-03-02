@@ -1,45 +1,40 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Survey from "./Survey";
+import GetAllSurveys from "./GetAllSurveys";
+import GetSingeSurvey from "./GetSingleSurvey";
 
 export default class App extends React.Component
 {
     url = 'https://theplanets.azurewebsites.net/Api/Survey/';
 
     state = {
-        loading: true,
-        surveys: []
+        view: 0
     };
 
-    async componentDidMount() {
-        const response = await fetch(this.url);
-        const data = await response.json();
-        console.log(data);
-        this.setState({loading: false, surveys: data})
+    selectView() {
+        if (this.state.view === 1) {
+            return (
+                <GetAllSurveys url={this.url}/>
+            );
+        }
+
+        if (this.state.view === 2) {
+            return (
+                <GetSingeSurvey url={this.url}/>
+            );
+        }
     }
 
-    render()
-    {
+    render() {
         return (
             <div className="App">
-                <header className="App-header">
+                <header>
                     <img src={logo} className="App-logo" alt="logo"/>
-                    {this.state.loading ? <div>loading...</div> : <div>{
-                        this.state.surveys.map(x => (
-                            <Survey
-                                surveyId={x.surveyId}
-                                surveyDateTime={x.surveyDateTime}
-                                firstName={x.firstName}
-                                lastName={x.lastName}
-                                city={x.city}
-                                country={x.country}
-                                rating={x.rating}
-                                comment={x.comment}
-                            />
-                        ))
-                    }</div>}
                 </header>
+                <button onClick= {() => {this.setState({view: 1})}}>Get All Surveys</button>
+                <button onClick= {() => {this.setState({view: 2})}}>Get Single Survey</button>
+                {this.selectView()}
             </div>
         );
     }
