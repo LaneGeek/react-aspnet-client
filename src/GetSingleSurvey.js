@@ -18,7 +18,6 @@ export default class GetSingeSurvey extends React.Component {
             this.setState({ loading: false, notFound: false, survey: data });
         else
             this.setState({ loading: false, notFound: true})
-
     }
 
     handleChange(x) {

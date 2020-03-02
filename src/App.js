@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import GetAllSurveys from "./GetAllSurveys";
 import GetSingeSurvey from "./GetSingleSurvey";
+import DeleteSurvey from "./DeleteSurvey";
 
 export default class App extends React.Component
 {
@@ -22,6 +23,12 @@ export default class App extends React.Component
         if (this.state.view === 2) {
             return (
                 <GetSingeSurvey url={this.url}/>
+            );
+        }
+
+        if (this.state.view === 3) {
+            return (
+                <DeleteSurvey url={this.url}/>
             );
         }
     }
