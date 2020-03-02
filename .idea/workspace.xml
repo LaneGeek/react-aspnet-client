@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aacfc9d6-0ef1-420e-be28-a3f9ce790c3a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GetAllSurveys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GetSingleSurvey.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GetSingleSurvey.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/GetSingleSurvey.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582998805923</updated>
       <workItem from="1582998807083" duration="3094000" />
-      <workItem from="1583108395878" duration="13267000" />
+      <workItem from="1583108395878" duration="13889000" />
     </task>
     <task id="LOCAL-00001" summary="Added surveys rendering.">
       <created>1583118033718</created>
@@ -99,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583118033718</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Get all and get single survey done.">
+      <created>1583173766100</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583173766100</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,12 +110,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added surveys rendering." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added surveys rendering." />
+    <MESSAGE value="Get all and get single survey done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Get all and get single survey done." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="875" y="371" width="864" height="924" key="CommitChangelistDialog2" timestamp="1583118033525">
-      <screen x="0" y="23" width="2560" height="1338" />
+    <state x="875" y="371" width="864" height="924" key="CommitChangelistDialog2" timestamp="1583173765996">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
+    <state x="875" y="371" key="CommitChangelistDialog2/2560.23.2560.1417/0.23.2560.1337@0.23.2560.1337" timestamp="1583173765996" />
     <state x="875" y="371" width="864" height="924" key="CommitChangelistDialog2/2560.23.2560.1417/0.23.2560.1338@0.23.2560.1338" timestamp="1583118033525" />
     <state x="1146" y="669" key="Github.ShareDialog" timestamp="1583117924570">
       <screen x="0" y="23" width="2560" height="1338" />
@@ -190,9 +195,10 @@
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="359" y="529" key="SettingsEditor/2560.23.2560.1417/0.23.2560.1337@0.23.2560.1337" timestamp="1583123667909" />
-    <state x="907" y="508" key="Vcs.Push.Dialog.v2" timestamp="1583118036460">
-      <screen x="0" y="23" width="2560" height="1338" />
+    <state x="907" y="508" key="Vcs.Push.Dialog.v2" timestamp="1583173767974">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
+    <state x="907" y="508" key="Vcs.Push.Dialog.v2/2560.23.2560.1417/0.23.2560.1337@0.23.2560.1337" timestamp="1583173767974" />
     <state x="907" y="508" key="Vcs.Push.Dialog.v2/2560.23.2560.1417/0.23.2560.1338@0.23.2560.1338" timestamp="1583118036460" />
   </component>
 </project>

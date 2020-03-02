@@ -7,33 +7,33 @@ export default class GetSingeSurvey extends React.Component {
     state = {
         loading: true,
         survey: {},
-        value: 0,
+        value: "",
         notFound: false
     };
 
     async renderSurvey(id) {
         const response = await fetch(this.props.url);
         const data = await response.json();
-        const survey = data.filter(x => x.surveyId == id)[0];
+        const survey = data.filter(x => x.surveyId.toString() === id)[0];
         if (survey)
-            this.setState({ loading: false, notFound: false, survey: survey });
+            this.setState({ loading: false, notFound: false, survey });
         else
             this.setState({ loading: false, notFound: true})
 
     }
 
-    handleChange(e) {
-        this.setState({ value: e.target.value })
+    handleChange(x) {
+        this.setState({ value: x.target.value })
     }
 
     render() {
         return (
             <div className="App">
                 <p>Enter the survey id: </p>
-                <input type="text" name='value' value={this.state.value} onChange={(e) => this.handleChange(e)}/>
+                <input type="text" name='value' value={this.state.value} onChange={(x) => this.handleChange(x)}/>
                 <button onClick={() => this.renderSurvey(this.state.value)}>Get The Survey</button>
                 <div>
-                {this.state.loading ? "loading..." : (this.state.notFound ? "Survey Not Found" : <Survey
+                    {this.state.loading ? "" : (this.state.notFound ? <p>Survey Not Found</p> : <Survey
                     surveyId={this.state.survey.surveyId}
                     surveyDateTime={this.state.survey.surveyDateTime}
                     firstName={this.state.survey.firstName}
