@@ -34,6 +34,7 @@ export default class App extends React.Component
                 </header>
                 <button onClick= {() => {this.setState({view: 1})}}>Get All Surveys</button>
                 <button onClick= {() => {this.setState({view: 2})}}>Get Single Survey</button>
+                <button onClick= {() => {this.setState({view: 3})}}>Delete Survey</button>
                 {this.selectView()}
             </div>
         );

@@ -12,11 +12,10 @@ export default class GetSingeSurvey extends React.Component {
     };
 
     async renderSurvey(id) {
-        const response = await fetch(this.props.url);
+        const response = await fetch(this.props.url + "/" + id);
         const data = await response.json();
-        const survey = data.filter(x => x.surveyId.toString() === id)[0];
-        if (survey)
-            this.setState({ loading: false, notFound: false, survey });
+        if (data.surveyId)
+            this.setState({ loading: false, notFound: false, survey: data });
         else
             this.setState({ loading: false, notFound: true})
 
