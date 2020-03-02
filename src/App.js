@@ -4,6 +4,7 @@ import './App.css';
 import GetAllSurveys from "./GetAllSurveys";
 import GetSingeSurvey from "./GetSingleSurvey";
 import DeleteSurvey from "./DeleteSurvey";
+import ModifySurvey from "./ModifySurvey";
 
 export default class App extends React.Component
 {
@@ -14,22 +15,16 @@ export default class App extends React.Component
     };
 
     selectView() {
-        if (this.state.view === 1) {
-            return (
-                <GetAllSurveys url={this.url}/>
-            );
-        }
-
-        if (this.state.view === 2) {
-            return (
-                <GetSingeSurvey url={this.url}/>
-            );
-        }
-
-        if (this.state.view === 3) {
-            return (
-                <DeleteSurvey url={this.url}/>
-            );
+        switch (this.state.view) {
+            case 1:
+                return <GetAllSurveys url={this.url}/>;
+            case 2:
+                return <GetSingeSurvey url={this.url}/>;
+            case 3:
+                return <DeleteSurvey url={this.url}/>;
+            case 4:
+                return <ModifySurvey url={this.url}/>;
+            default:
         }
     }
 
@@ -42,6 +37,8 @@ export default class App extends React.Component
                 <button onClick= {() => {this.setState({view: 1})}}>Get All Surveys</button>
                 <button onClick= {() => {this.setState({view: 2})}}>Get Single Survey</button>
                 <button onClick= {() => {this.setState({view: 3})}}>Delete Survey</button>
+                <br/>
+                <button onClick= {() => {this.setState({view: 4})}}>Modify Survey</button>
                 {this.selectView()}
             </div>
         );
