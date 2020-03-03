@@ -6,6 +6,7 @@ import GetSingeSurvey from "./GetSingleSurvey";
 import DeleteSurvey from "./DeleteSurvey";
 import ModifySurvey from "./ModifySurvey";
 import AddSurvey from "./AddSurvey";
+import ReplaceSurvey from "./ReplaceSurvey";
 
 export default class App extends React.Component
 {
@@ -27,6 +28,8 @@ export default class App extends React.Component
                 return <ModifySurvey url={this.url}/>;
             case 5:
                 return <AddSurvey url={this.url}/>;
+            case 6:
+                return <ReplaceSurvey url={this.url}/>;
             default:
         }
     }
@@ -43,6 +46,7 @@ export default class App extends React.Component
                 <br/>
                 <button onClick= {() => {this.setState({view: 4})}}>Modify Survey</button>
                 <button onClick= {() => {this.setState({view: 5})}}>Add Survey</button>
+                <button onClick= {() => {this.setState({view: 6})}}>Replace Survey</button>
                 {this.selectView()}
             </div>
         );
